@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Tools Cited AI and LLMs in Organic Synthesis</title>
+<style>
+:root{--ink:#2b2733;--muted:#78728a;--accent:#6d4aff;--accent-dark:#4c2fd6;--accent-soft:#efeaff;--bg:#fbfaff;--card-bg:#fff;--border:#e7e3f0}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;-webkit-tap-highlight-color:transparent;overscroll-behavior:none}
+.stage{position:relative;height:100dvh;width:100%;display:flex;align-items:center;justify-content:center;user-select:none;background:radial-gradient(circle at 12% 8%,var(--accent-soft) 0%,transparent 45%),radial-gradient(circle at 88% 92%,var(--accent-soft) 0%,transparent 40%)}
+.eyebrow{position:absolute;top:26px;left:0;right:0;text-align:center;font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);z-index:2}
+.card-wrap{position:relative;width:min(430px,88vw);height:min(560px,78vh);display:flex;align-items:center;justify-content:center}
+.card{position:absolute;z-index:2;width:100%;background:var(--card-bg);border:1px solid var(--border);border-radius:22px;box-shadow:0 20px 45px -20px rgba(76,47,214,.28),0 2px 8px rgba(43,39,51,.04);padding:40px 32px 34px;text-align:center;opacity:1;transform:translateX(0);transition:opacity .22s ease,transform .22s ease}
+.card.out-left{opacity:0;transform:translateX(-26px)}
+.card.out-right{opacity:0;transform:translateX(26px)}
+.icon-badge{width:68px;height:68px;margin:0 auto 20px;border-radius:20px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center}
+.icon-badge svg{width:34px;height:34px}
+.tag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.05em;color:var(--accent-dark);background:var(--accent-soft);border-radius:999px;padding:5px 13px;margin-bottom:16px}
+h1{font-size:25px;margin:0 0 12px;font-weight:800;line-height:1.25;letter-spacing:-.01em}
+p.desc{font-size:15px;line-height:1.62;color:var(--muted);margin:0 0 20px}
+.cited{font-size:12.5px;font-weight:600;color:var(--accent-dark);padding-top:16px;border-top:1px solid var(--border)}
+.zone{position:absolute;top:0;bottom:0;width:50%;z-index:1}
+.zone.left{left:0}
+.zone.right{right:0}
+.chevron{position:absolute;top:50%;transform:translateY(-50%);color:var(--accent);opacity:.35;font-size:20px;pointer-events:none;z-index:2}
+.chevron.left{left:6px}
+.chevron.right{right:6px}
+.dots{position:absolute;bottom:26px;left:0;right:0;display:flex;justify-content:center;align-items:center;gap:6px;z-index:2}
+.dot{width:6px;height:6px;border-radius:999px;background:var(--border);transition:width .2s ease,background .2s ease}
+.dot.active{width:20px;background:var(--accent)}
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+<div class="eyebrow">Tools Cited - AI and LLMs in Organic Synthesis</div>
+<span class="chevron left">&#8249;</span>
+<span class="chevron right">&#8250;</span>
+<div class="card-wrap">
+<div class="card" id="card">
+<div class="icon-badge" id="icon"></div>
+<div class="tag" id="tag"></div>
+<h1 id="title"></h1>
+<p class="desc" id="desc"></p>
+<div class="cited" id="cited"></div>
+</div>
+</div>
+<div class="zone left" id="zoneLeft"></div>
+<div class="zone right" id="zoneRight"></div>
+<div class="dots" id="dots"></div>
+</div>
+<script src="icons2.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
